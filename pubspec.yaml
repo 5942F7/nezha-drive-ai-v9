@@ -1,0 +1,28 @@
+name: nezha_drive_ai_v9_device
+description: "導航管家 Pro V9：哪吒AI安全駕駛管家 真機功能版"
+publish_to: "none"
+version: 9.1.0+2
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  geolocator: ^13.0.2
+  permission_handler: ^11.3.1
+  sensors_plus: ^6.1.0
+  flutter_tts: ^4.0.2
+  speech_to_text: ^7.0.0
+  camera: ^0.11.0+2
+  path_provider: ^2.1.5
+  path: ^1.9.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
