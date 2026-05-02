@@ -1,0 +1,20 @@
+workflows:
+  android-apk:
+    name: Android APK Build
+    max_build_duration: 60
+    instance_type: mac_mini_m2
+    environment:
+      flutter: stable
+    scripts:
+      - name: Recreate Android project with Flutter v2 embedding
+        script: |
+          rm -rf android
+          flutter create --platforms=android --org com.nezha.driveai .
+      - name: Get Flutter packages
+        script: |
+          flutter pub get
+      - name: Build APK
+        script: |
+          flutter build apk --release
+    artifacts:
+      - build/app/outputs/flutter-apk/app-release.apk
