@@ -1,7 +1,7 @@
-name: nezha_drive_ai_v9_device
-description: "導航管家 Pro V9：哪吒AI安全駕駛管家 真機功能版"
+name: nezha_drive_ai_v9_3
+description: "導航管家 Pro V9.3：哪吒真人AI助手版"
 publish_to: "none"
-version: 9.1.0+2
+version: 9.3.0+4
 
 environment:
   sdk: ">=3.3.0 <4.0.0"
