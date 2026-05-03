@@ -1,7 +1,7 @@
-name: nezha_drive_ai_v9_4
-description: "導航管家 Pro V9.4：AI安全管家 + 導航入口完整修正版"
+name: nezha_drive_ai_v10_1
+description: "導航管家 Pro V10.1：哪吒AI副駕 + Waze導航 + 測速提醒"
 publish_to: "none"
-version: 9.4.0+5
+version: 10.1.0+6
 
 environment:
   sdk: ">=3.3.0 <4.0.0"
@@ -15,9 +15,6 @@ dependencies:
   sensors_plus: ^6.1.0
   flutter_tts: ^4.0.2
   speech_to_text: ^7.0.0
-  camera: ^0.11.0+2
-  path_provider: ^2.1.5
-  path: ^1.9.0
   url_launcher: ^6.3.1
 
 dev_dependencies:

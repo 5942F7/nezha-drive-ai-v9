@@ -1,18 +1,15 @@
-導航管家 Pro V9.4 導航入口完整修正版
+導航管家 Pro V10.1 哪吒AI副駕 + Waze融合 + 測速提醒
 
-這次已補齊：
-1. 主畫面可輸入目的地
-2. 一鍵開 Google 導航
-3. 一鍵開 Waze 導航
-4. 客戶/常用地點列表
-5. 新增地點：名稱、地址、入口、停車點、備註
-6. 選已存地點導航
-7. 哪吒 AI 可回答導航、入口、停車、錄影、定位
-8. GPS/速度/精準度顯示
-9. 錄影狀態保留
-10. 急煞/震動感測保留
-11. Android 權限與 queries 補上
-12. Codemagic YAML 補上
+已補：
+- Waze導航預設，Google備用
+- 目的地與地點管理
+- 入口/停車點/備註
+- 測速照相提醒頁
+- 內建測速點示範資料，可換完整台灣測速JSON
+- 接近測速點約350m提醒
+- 超速時強提醒
+- 原創哪吒角色繪製，不再只用emoji
+- GPS、速度、急煞感測、錄影狀態
+- Android Manifest 支援 Waze / Google Maps 外開
 
-更新方式：
 覆蓋 GitHub 的 lib/main.dart、pubspec.yaml、codemagic.yaml 後，Codemagic 重新 Build。
