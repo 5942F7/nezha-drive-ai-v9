@@ -10,7 +10,7 @@ workflows:
         script: |
           rm -rf android
           flutter create --platforms=android --org com.nezha.driveai .
-      - name: Restore Android permissions
+      - name: Restore Android permissions and queries
         script: |
           mkdir -p android/app/src/main
           cat > android/app/src/main/AndroidManifest.xml <<'EOF'
@@ -22,13 +22,16 @@ workflows:
               <uses-permission android:name="android.permission.RECORD_AUDIO"/>
               <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
               <uses-permission android:name="android.permission.WAKE_LOCK"/>
-              <application android:label="導航管家Pro V9.3" android:name="${applicationName}" android:icon="@mipmap/ic_launcher">
+              <queries>
+                  <package android:name="com.google.android.apps.maps"/>
+                  <package android:name="com.waze"/>
+                  <intent><action android:name="android.intent.action.VIEW"/><data android:scheme="https"/></intent>
+                  <intent><action android:name="android.intent.action.VIEW"/><data android:scheme="google.navigation"/></intent>
+              </queries>
+              <application android:label="導航管家Pro V9.4" android:name="${applicationName}" android:icon="@mipmap/ic_launcher">
                   <activity android:name=".MainActivity" android:exported="true" android:launchMode="singleTop" android:theme="@style/LaunchTheme" android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode" android:hardwareAccelerated="true" android:windowSoftInputMode="adjustResize">
                       <meta-data android:name="io.flutter.embedding.android.NormalTheme" android:resource="@style/NormalTheme"/>
-                      <intent-filter>
-                          <action android:name="android.intent.action.MAIN"/>
-                          <category android:name="android.intent.category.LAUNCHER"/>
-                      </intent-filter>
+                      <intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter>
                   </activity>
                   <meta-data android:name="flutterEmbedding" android:value="2"/>
               </application>
